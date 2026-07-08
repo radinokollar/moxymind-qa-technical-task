@@ -10,7 +10,6 @@ export class InventoryPage {
   readonly inventoryContainer: Locator;
   readonly footer: Locator;
 
-  // Lokátory pre bočné menu
   readonly sidebarInventory: Locator;
   readonly sidebarAbout: Locator;
   readonly sidebarLogout: Locator;
