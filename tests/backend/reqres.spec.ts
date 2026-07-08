@@ -1,14 +1,20 @@
+import 'dotenv/config';
 import { test, expect } from '@playwright/test';
 import testUsers from './data/userData.json';
 
 test.describe('ReqRes API Automation Tasks', () => {
   const baseUrl = 'https://reqres.in';
+  const apiToken = process.env.REQRES_API_TOKEN;
+
+  test.beforeEach(() => {
+    expect(apiToken, 'Set REQRES_API_TOKEN in a local .env file before running backend tests.').toBeTruthy();
+  });
 
   test('Test Case 1 - GET - List Users', async ({ request }) => {
     // 1. Send a GET request with query parameters and auth header
     const response = await request.get(`${baseUrl}/api/users`, {
       headers: {
-        'x-api-key': 'xxx' // Replace with a valid API key
+        'x-api-key': apiToken as string
       },
       params: {
         page: 2
@@ -55,7 +61,7 @@ test.describe('ReqRes API Automation Tasks', () => {
     // 1. Send POST request using external test data
     const response = await request.post(`${baseUrl}/api/users`, {
       headers: {
-        'x-api-key': 'xxx', // Replace with a valid API key
+        'x-api-key': apiToken as string,
       },
       data: {
         name: testUsers.name,

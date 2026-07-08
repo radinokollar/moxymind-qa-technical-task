@@ -4,18 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test:all": "npx playwright test",
-  "test:frontend": "npx playwright test tests/frontend",
-  "test:frontend:headed": "npx playwright test tests/frontend --headed",
-  "test:frontend:ui": "npx playwright test tests/frontend --ui",
-  "report:show": "npx playwright show-report"
-},
+    "test:all": "npx playwright test",
+    "test:frontend": "npx playwright test tests/frontend",
+    "test:frontend:headed": "npx playwright test tests/frontend --headed",
+    "test:frontend:ui": "npx playwright test tests/frontend --ui",
+    "test:backend": "npx playwright test tests/backend",
+    "test:backend:headed": "npx playwright test tests/backend --headed",
+    "test:backend:ui": "npx playwright test tests/backend --ui",
+    "report:show": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.0"
+    "@types/node": "^26.1.0",
+    "dotenv": "^16.6.1"
   }
 }
