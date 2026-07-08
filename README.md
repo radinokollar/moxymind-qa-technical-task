@@ -4,7 +4,7 @@ This project contains Playwright end-to-end and API automation tests for a simpl
 
 ## Project structure
 
-- tests/frontend: UI tests for the SauceDemo-style login and inventory flows
+- tests/frontend: UI tests for the SauceDemo page
 - tests/backend: API tests for ReqRes endpoints
 - tests/frontend/pages: Page Object Model classes used by UI tests
 - playwright.config.ts: Playwright configuration and browser projects
